@@ -33,7 +33,7 @@ interface Interval {
 }
 
 function App() {
-    const [names, setNames] = useState(['Imię']);
+    const [names, setNames] = useState<string[]>([]);
     const [sleepFrom, setSleepFrom] = useState<Dayjs | null>(null);
     const [sleepTo, setSleepTo] = useState<Dayjs | null>(null);
     const [openModal, setOpenModal] = useState<boolean>(false);
