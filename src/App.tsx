@@ -81,7 +81,12 @@ function App() {
                 <br />
                 <NamesSection names={names} setNames={setNames} />
                 <br />
-                <Button onClick={handleCalculateSleep}>Licz spanko</Button>
+                <Button
+                    disabled={names.length < 2 || !sleepFrom || !sleepTo}
+                    onClick={handleCalculateSleep}
+                >
+                    Licz spanko
+                </Button>
                 <Modal
                     open={openModal}
                     onClose={handleClose}
@@ -89,8 +94,9 @@ function App() {
                     aria-describedby="modal-modal-description"
                 >
                     <Box sx={style}>
-                        {intervals.map((interval) => (
+                        {intervals.map((interval, i) => (
                             <Box
+                                key={i}
                                 component="section"
                                 sx={{ p: 2, border: '1px solid grey' }}
                             >
