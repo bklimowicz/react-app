@@ -5,7 +5,7 @@ import PeriodSection from './components/periodSection/PeriodSection';
 import NamesSection from './components/namesSection/NamesSection';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import dayjs, { Dayjs } from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
@@ -15,7 +15,7 @@ dayjs.extend(timezone);
 dayjs.tz.setDefault('Europe/Warsaw');
 
 const style = {
-    position: 'absolute' as 'absolute',
+    position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
